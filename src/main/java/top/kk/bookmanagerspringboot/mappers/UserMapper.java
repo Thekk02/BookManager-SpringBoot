@@ -1,6 +1,12 @@
-package top.kk.bookmanagerspringboot.mappers;/**
+package top.kk.bookmanagerspringboot.mappers;
+
+import org.apache.ibatis.annotations.Mapper;
+
+/**
  * @author kk
  * @description 用户DAO层
  * @date 2023-08-23 10:34:24
- */public interface UserMapper {
+ */
+@Mapper
+public interface UserMapper {
 }

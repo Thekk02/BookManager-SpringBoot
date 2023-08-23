@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<!--namespace 名称空间-->
+<mapper namespace="top.kk.bookmanagerspringboot.mappers.UserMapper">
+    <!--statement-->
+    <select id="selectAll" resultType="top.kk.bookmanagerspringboot.entity.User">
+        select *from user
+    </select>
+    <select id="selectByName" resultType="top.kk.bookmanagerspringboot.entity.User">
+        select * from user where username like #{name}
+    </select>
+</mapper>

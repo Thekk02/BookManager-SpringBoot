@@ -1,0 +1,48 @@
+spring:
+  datasource:
+    #设置数据源和驱动
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #设置数据库地址以及数据库名称和编码格式
+    url: jdbc:mysql://localhost:3306/bookmanager?useUnicode=true&characterEncoding=utf8
+
+    username: root
+    password: 123456
+server:
+  #设置访问端口，默认为80的时候就可以不用输入端口访问
+  port: 80
+mybatis:
+  #指定Mybatis的Mapper文件
+  mapper-locations: classpath:mappers/*xml
+  #指定Mybatis的实体目录
+  type-aliases-package: top.kk.bookmanagerspringboot.mybatis.entity
+
+
+
+#  spring:
+#    datasource:
+#      driver-class-name: com.mysql.jdbc.Driver
+#      url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf8&useSSL=false
+#      username: root
+#      password: 123
+#    mvc:
+#      view:
+#        suffix: .jsp
+#        prefix: /
+#    resources:
+#      static-locations: classpath:templates
+#  mybatis:
+#    type-aliases-package: com.hikktn.domain
+#    mapper-locations: classpath:mapper/*Mapper.xml
+#    configuration:
+#      map-underscore-to-camel-case: true #开启自动驼峰命名规则（camel case）映射
+#      lazy-loading-enabled: true #开启延时加载开关
+#      aggressive-lazy-loading: false #将积极加载改为消极加载（即按需加载）,默认值就是false
+#      lazy-load-trigger-methods: "" #阻挡不相干的操作触发，实现懒加载
+#      cache-enabled: true #打开全局缓存开关（二级环境），默认值就是true
+#  logging:
+#    level:
+#      com.hikktn: debug
+#  server:
+#    port: 8080
+#    servlet:
+#      context-path: /

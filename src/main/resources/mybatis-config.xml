@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <package name="com.kk.pojo"/>
+        <package name="top.kk.bookmanagerspringboot.mybatis.entity"/>
     </typeAliases>
     <environments default="development">
         <environment id="development">
@@ -19,7 +19,7 @@
     </environments>
     <mappers>
         <!--加载sql映射文件-->
-        <mapper resource="com/kk/mappers/UserMapper.xml"/>
-        <mapper resource="com/kk/mappers/BookMapper.xml"/>
+        <mapper resource="top/kk/bookmanagerspringboot/mappers/UserMapper.xml"/>
+        <mapper resource="top/kk/bookmanagerspringboot/mappers/BookMapper.xml"/>
     </mappers>
 </configuration>

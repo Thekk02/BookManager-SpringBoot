@@ -49,7 +49,7 @@ configuration:
       # Service category names are the name of the defining module class
       # and then the service id.
       -
-        name: com.kk.services.AppModule.TimingFilter
+        name: com.kk.services
         level: info
 
       # Turn on some verbose debugging about everything in the application. This is nice initially,
