@@ -1,6 +1,10 @@
 package top.kk.bookmanagerspringboot.mappers;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
+import top.kk.bookmanagerspringboot.entity.User;
+
+import java.util.List;
 
 /**
  * @author kk
@@ -9,4 +13,20 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface UserMapper {
+    /**
+    * @Description:查询所有用户
+    * @Params:
+    * @Return: 用户列表
+    */
+    @Select("select * from user")
+    public List<User> SelectAll();
+    
+    /**
+    * @Description: 
+    * @Params:
+    * @Return: 
+    */
+    @Select("select from user where username = #{name} and password = #{pwd}")
+    public User SelectUserByNameAndPwd(String name,String pwd);
+
 }
